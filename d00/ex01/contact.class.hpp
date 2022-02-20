@@ -1,5 +1,7 @@
 #ifndef CONTACT_CLASS_H
 # define CONTACT_CLASS_H
+#include <iostream>
+#include <iomanip>
 
 class   Contact{
 
@@ -10,7 +12,8 @@ public:
     std::string nickname;
     std::string phone_number;
     std::string darkest_secret;
-
+    void printAll(void);
+    void print(void);
     Contact(void);
     ~Contact(void);
 };

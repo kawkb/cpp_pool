@@ -20,8 +20,17 @@ Contact   ADD(void)
 	return (contact);
 }
 
+bool isNumber(const std::string str)
+{
+    for (size_t i = 0; i < str.length() ; i++) {
+        if (std::isdigit(str[i]) == 0) return false;
+    }
+    return true;
+}
+
 int     main(void)
 {
+	std::string	i;
 	std::string	cmd;
 	Phonebook	phonebook;
 
@@ -32,7 +41,15 @@ int     main(void)
 		if (cmd == "ADD")
 			phonebook.add(ADD());
 		else if(cmd == "SEARCH")
+		{
 			phonebook.search();
+			std::cout << "Enter the Index of a Contact to See his Infos:" << std::endl;
+			std::getline(std::cin, i);
+			if (!isNumber(i))
+				std::cout << "!!!! INDEX MUST BE A NUMBER !!!!" << std::endl;
+			else
+				phonebook.searchOne(std::stoi(i));
+		}
 		else if(cmd == "EXIT")
 			return (0);
 	}
