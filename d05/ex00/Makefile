@@ -1,9 +1,9 @@
-SRC = megaphone.cpp
-NAME = megaphone
+SRC = main.cpp Bureaucrat.cpp
+NAME = Bureau
 CC = c++
-FLAGS = -Wall -Wextra -Werror     
+FLAGS = -Wall -Wextra -Werror -std=c++98
 all : $(NAME)
-$(NAME) :
+$(NAME) : $(SRC)
 	$(CC) -o $(NAME) $(FLAGS) $(SRC)
 clean :
 fclean : clean

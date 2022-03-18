@@ -1,6 +1,6 @@
 NAME	= phonebook
-SRC		= contact.class.cpp main.cpp phonebook.class.cpp
-CC		= g++
+SRC		= Contact.cpp main.cpp Phonebook.cpp
+CC		= c++
 FLAGS	= -Wall -Wextra -Werror
 
 all : $(NAME)
